@@ -1,0 +1,96 @@
+@font-face{
+  src:url(../fuente/PatuaOne-Regular.ttf);
+  font-family: "PatuaOne-Regular";
+}
+body{
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+.capa{
+	padding: 20px;
+	margin: 0px;
+}
+.colegio{
+	width: 100px;
+}
+.fila-blanco{
+	border: 1px solid rgb(255, 77, 77);
+	background-color: rgb(255, 77, 77);
+}
+.imagenes{
+	text-align: center;
+	padding: 10px;
+	background-color: white;
+}
+.parrafo{
+	padding-bottom:10px; 
+	padding-top:10px; 
+}
+.guion-abajo{
+	border-bottom: 2px solid white;
+	color: white; 
+}
+.guion-borde{
+	border-bottom: 2px solid white; 
+	
+	color: rgba(255,255,255,1);
+}
+/*cuadro de fotos*/
+
+.titulos{
+  margin:30px;
+  padding:10px;
+  border-bottom: 1px solid #1ACDED;
+  font-family: "PatuaOne-Regular";
+  color: #414141;
+  font-size: 2.2em; 
+}
+.sub-titulo{
+	background-color: #41D8A8;
+	color: white;
+	margin: 0px;
+	border-radius: 8px 8px 0px 0px;
+	padding: 10px; 
+}
+.foto-fecha{
+	border-radius: 8px  8px 0px 0px;
+	margin: 20px;
+	border: 1px solid #41D8A8;
+}
+.foto-interior{
+	width: 100%;
+	height: 200px;
+	cursor: pointer;
+}
+.fila{
+	padding: 10px;
+}
+/*pie de pagina*/
+.opciones{
+  background-color: #323232;
+  padding: 3em;  
+}
+.aviso{
+  margin-top:40px;
+  display: flex;
+  padding: 40px;
+}
+.comunicado{
+  border-top:2px solid #E72A64;  
+  flex-grow:1;
+}
+.indicador{
+  list-style: none;
+  padding: 0px;
+  margin:40px;  
+}
+.indicador>li{
+  margin: 0px;
+  padding: 2px;
+  font-size: 0.9em;
+  font-family: "Glegoo-Regular";
+  color: white;
+}
+/*fin de pie de pagina*/

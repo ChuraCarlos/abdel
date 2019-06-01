@@ -1,0 +1,45 @@
+/*etiqueta de menu*/
+.sidebar{
+	overflow-x: hidden;
+    overflow-y: auto;
+	display: block;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	top:0;
+	padding-top: 20px;
+	padding-left: 0;
+	padding-right: 0;
+	background-color: #242F33;
+}
+/*fin de etiqueta*/
+.main{
+	padding-left:40px; 
+	background-color: rgba(255,255,255,1);
+}
+.min-menu{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.etiqueta{
+	margin: 0px;
+	padding: 10px;
+	color:#C8C8C8;
+	cursor:pointer;
+	padding-left:20px;  
+}
+.etiqueta:hover{
+	background-color: #E6E6E6;
+	color: #353535;
+}
+/*encabezado*/
+.page-header{
+	color: #535353;
+}
+
+.placeholders {
+  margin-bottom: 30px;
+ 
+}
+

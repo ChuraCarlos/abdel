@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<title>registro</title>
+	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/registro.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/registro.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row menu">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li>
+						<a onclick="efecto(0);">seccion de Docentes</a>
+						<ul class="min-menu">
+							<li class="etiqueta" onclick="mostrando_docentes();">mostrar docentes</li>
+							<li class="etiqueta" onclick="opacidad(0,'registrar docentes');">registrar docentes</li>
+						</ul>
+					</li>
+					<li>
+						<a onclick="efecto(1);">seccion de Fotos</a>
+						<ul class="min-menu">
+							<li class="etiqueta" onclick="ft_fechas();">mostrar fotos</li>
+							<li class="etiqueta" onclick="opacidad(2,'registrar fotos');">registrar fotos</li>
+						</ul>
+					</li>
+					<li>
+						<a onclick="efecto(2);">seccion de Noticias</a>
+						<ul class="min-menu">
+							<li class="etiqueta" onclick="mostrando_noticia();">mostrar noticias</li>
+							<li class="etiqueta" onclick="opacidad(1,'registrar noticias');">registrar noticias</li>
+						</ul>
+					</li>
+					<li>
+						<a onclick="efecto(3);">Seccion Actividad</a>
+						<ul class="min-menu">
+							<li class="etiqueta" onclick="mostrar_actividades();">mostrar Actividad</li>
+							<li class="etiqueta" onclick="opacidad(3,'registrar noticias');">registrar Actividad</li>
+						</ul>
+					</li>
+					<li><a href="index.html">Salir del Sistema</a></li>
+				</ul>
+			</div>
+			<!-- columna de respuestas -->
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<h1 class="page-header">sistema</h1>
+				<div class="row cuadros">
+				<div class="col-md-6">
+				<form class="formulario">
+						<div class="form-group">
+						<label>Nombre</label>
+						<input type="text" class="form-control nombre" placeholder="nombre" required/>
+						</div>
+						<div class="form-group">
+						<label>Apellido</label>
+						<input type="text" class="form-control apellido" placeholder="apellido" required/>
+						</div>
+						<div class="form-group">
+						<label>Correo electronico</label>
+						<input type="text" class="form-control email" placeholder="e-mail" required/>
+						</div>
+						<div class="form-group">
+						<label>DNI</label>
+						<input type="text" class="form-control dni" maxlength="8" placeholder="dni" required/>
+						</div>
+						<div class="form-group">
+						<label>Foto</label>
+						<input type="file" name="formu" class="form-control foto" required/>
+						</div>
+				</form>
+				<button class="btn btn-info" onclick="guardar_docente();">guardar</button>
+				</div>
+				</div>
+				<div class="row cuadros">
+					<div class="col-md-6">
+					<form class="registro">
+							<div class="form-group">
+							<label>Titulo</label>
+							<input type="text" class="form-control titulo" required/>
+							</div>
+							<div class="form-group">
+							<label>Descripcion</label>
+							<textarea type="text" class="form-control descripcion" required></textarea>
+							</div>
+							<div class="form-group">
+							<label>Fecha</label>
+							<input type="date" class="form-control calendario" required/>
+							</div>
+							<div class="form-group">
+							<label>Foto</label>
+							<input type="file" class="form-control ft" name="registro" required/>
+							</div>
+					</form>
+					<button class="btn btn-info" onclick="guardar_noticia();">guardar</button>
+					</div>
+				</div>
+				<div class="row cuadros">
+					<div class="col-md-6">
+					<form id="formula">
+							<div class="form-group">
+							<label>Foto</label>
+							<input type="file" class="form-control foto-imagen" name="fts" required/>
+							</div>
+							<div class="form-group">
+							<label>fechas</label>
+							<input type="date" class="form-control fecha_foto" required/>
+							</div>
+							
+					</form>
+					<button class="btn btn-info" onclick="guardar_fechas();">guardar</button>
+					</div>
+				</div>
+				<div class="row cuadros">
+					<div class="col-md-6">
+					<form id="formulario_actividad">
+							<div class="form-group">
+							<label>Nombre de la actividad</label>
+							<input type="text" class="form-control actividad" required/>
+							</div>
+							<div class="form-group">
+							<label>Hora de la actividad</label>
+							<input type="time" class="form-control hora" required/>
+							</div>
+							<div class="form-group">
+							<label>Responsables de la actividad</label>
+							<input type="text" class="form-control responsable" required/>
+							</div>
+							<div class="form-group">
+							<label>fechas</label>
+							<input type="date" class="form-control fecha_actividad" required/>
+							</div>
+							
+					</form>
+					<button class="btn btn-info" onclick="guardar_actividad();">guardar</button>
+					</div>
+				</div>
+				<div class="row">
+				<section class="fuente_fotos"></section>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+<!-- modal -->
+<!-- 	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal de docentes -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Formulario</h4>
+      </div>
+      <div class="modal-body">
+  
+        	<div clas="form-group">
+        		<form class="formulario-edi">
+        				<input type="hidden" class="docente-id form-control">
+						<div class="form-group">
+						<label>Nombre</label>
+						<input type="text" class="form-control e-nombre" placeholder="nombre" required/>
+						</div>
+						<div class="form-group">
+						<label>Apellido</label>
+						<input type="text" class="form-control e-apellido" placeholder="apellido" required/>
+						</div>
+						<div class="form-group">
+						<label>Correo electronico</label>
+						<input type="text" class="form-control e-email" placeholder="e-mail" required/>
+						</div>
+						<div class="form-group">
+						<label>DNI</label>
+						<input type="text" class="form-control e-dni" placeholder="dni" required/>
+						</div>
+						<div class="form-group">
+						<label>Foto</label>
+						<input type="file" name="e-formu" class="form-control e-foto" required/>
+						<input type="hidden" class="form-control e-file"/>
+						</div>
+						<div class="form-group anclaje" style="text-align:center;">
+						</div>
+				</form>
+        	</div>
+   
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-success" data-dismiss="modal" onclick="enviar_data_docente()">Guardar Cambios</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de fotos -->
+<div class="modal fade" id="foto-Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Formulario</h4>
+      </div>
+      <div class="modal-body">
+       
+        		<form class="for-edi">
+        				<input type="hidden" class="foto-id form-control">
+						
+						<div class="form-group">
+						<label>fecha de la imagen</label>
+						<input type="date" class="form-control e-fecha" required/>
+						</div>
+						<div class="form-group">
+						<label>Foto</label>
+						<input type="file" name="disponible" class="form-control e-temporada" required/>
+						<input type="hidden" class="form-control e-oculto"/>
+						</div>
+						<div class="form-group anclaje-foto" style="text-align:center;">
+						</div>
+				</form>
+        	
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-success" onclick="enviando_fechas()">Guardar Cambios</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de fotos -->
+<div class="modal fade" id="noticia-Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Formulario</h4>
+      </div>
+      <div class="modal-body">
+        
+        		<form class="modificar">
+        				<input type="hidden" class="noticia-id form-control">
+						
+						<div class="form-group">
+						<label>titulo de la noticia</label>
+						<input type="text" class="form-control e-titulo" required/>
+						</div>
+						<div class="form-group">
+						<label>descripcion de la noticia</label>
+						<textarea class="form-control e-noticias" required></textarea>
+						</div>
+						<div class="form-group">
+						<label>fecha de la imagen</label>
+						<input type="date" class="form-control e-fechas" required/>
+						</div>
+						<div class="form-group">
+						<label>Foto</label>
+						<input type="file" name="e-revista" class="form-control e-evidencia" required/>
+						<input type="hidden" class="form-control e-documento"/>
+						</div>
+						<div class="form-group anclaje-noticia" style="text-align:center;">
+						</div>
+				</form>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-success" data-dismiss="modal" onclick="enviar_noticia()">Guardar Cambios</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal de actividades -->
+<div class="modal fade" id="actividad-Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Formulario</h4>
+      </div>
+      <div class="modal-body">
+        
+        		<form class="for_actividad">
+        				<input type="text" class="actividad_id form-control">
+						
+						<div class="form-group">
+						<label>Nombre de la actividad</label>
+						<input type="text" class="form-control e-actividad" required/>
+						</div>
+						<div class="form-group">
+						<label>Hora de la actividad</label>
+						<input type="time" class="form-control e-hora" required/>
+						</div>
+						<div class="form-group">
+						<label>Fecha de la actividad</label>
+						<input type="date" class="form-control e-fc_actividad" required/>
+						</div>
+						<div class="form-group">
+						<label>Responsable de la actividad</label>
+						<input type="text" class="form-control e-responsable" required/>
+						</div>
+				</form>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-success" data-dismiss="modal" onclick="enviar_actividad()">Guardar Cambios</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

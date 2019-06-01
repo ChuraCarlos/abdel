@@ -1,0 +1,137 @@
+@font-face{
+  src:url(../fuente/LibreBaskerville-Italic.ttf);
+  font-family: "LibreBaskerville-Italic";
+}
+@font-face{
+  src:url(../fuente/Julius_Sans_One/JuliusSansOne-Regular.ttf);
+  font-family: "JuliusSansOne-Regular";
+}
+@font-face{
+  src:url(../fuente/Glegoo/Glegoo-Regular.ttf);
+  font-family: "Glegoo-Regular";
+}
+@font-face{
+  src:url(../fuente/Tinos/Tinos-Regular.ttf);
+  font-family: "Tinos-Regular";
+}
+@font-face{
+  src:url(../fuente/Basic-Regular.ttf);
+  font-family: "Basic-Regular";
+}
+body{
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+.fila-blanco{
+	border: 1px solid rgb(255, 77, 77);
+	background-color: rgb(255, 77, 77);
+}
+.imagenes{
+	text-align: center;
+	padding: 10px;
+	background-color: white;
+}
+.colegio{
+	width: 100px;
+}
+.parrafo{
+	padding-bottom:10px; 
+	padding-top:10px; 
+}
+.guion-abajo{
+	border-bottom: 2px solid white;
+	color: white; 
+}
+.guion-borde{
+	border-bottom: 2px solid white; 
+	
+	color: rgba(255,255,255,1);
+}
+/*inicio*/
+.capa{
+	padding: 20px;
+	margin: 0px;
+}
+.libre{
+	border-radius:0px; 
+}
+.not-cuadro{
+  border: 1px solid rgba(0,0,0,0);
+  border-radius:10px;
+  
+  background-color: rgb(217, 217, 217); 
+}
+/* final*/
+
+.lineas{
+	padding: 20px;
+}
+.presentacion{
+	text-align: center; 
+	
+}
+.informacion{
+	text-align: center; 
+	background-color: #F6F6F6;
+	box-shadow: 0px 0px 30px #BEBEBE;
+}
+.informacion>h2{
+	font-size: 4em;
+	font-family: "JuliusSansOne-Regular";
+	border-bottom: 1px solid black;
+	color: #707070;
+}
+.informacion>h4{
+	font-family: "JuliusSansOne-Regular";
+}	
+.informacion>p{
+	font-family: "Basic-Regular";
+	font-size: 1.5em;
+}
+.forma-boton{
+	padding: 8px;
+	border: 1px solid rgb(0, 153, 255);
+	border-radius: 25px;
+	-moz-transition:0.5s; 
+	-webkit-transition:0.5s; 
+}
+.forma-boton:hover{
+	background-color: rgb(0, 153, 255);
+	color: white;
+}
+.dise{
+	width: 100%;
+	height: 200px;
+	border-radius:10px; 
+	top:-50%;
+	position: relative;
+}
+/*pie de pagina*/
+.opciones{
+  background-color: #323232;
+  padding: 3em;  
+}
+.aviso{
+  margin-top:40px;
+  display: flex;
+  padding: 40px;
+}
+.comunicado{
+  border-top:2px solid #E72A64;  
+  flex-grow:1;
+}
+.indicador{
+  list-style: none;
+  padding: 0px;
+  margin:40px;  
+}
+.indicador>li{
+  margin: 0px;
+  padding: 2px;
+  font-size: 0.9em;
+  font-family: "Glegoo-Regular";
+  color: white;
+}
+/*fin de pie de pagina*/

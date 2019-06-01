@@ -1,0 +1,366 @@
+@font-face{
+  src:url(../fuente/PatuaOne-Regular.ttf);
+  font-family: "PatuaOne-Regular";
+}
+@font-face{
+  src:url(../fuente/Abel/Abel-Regular.ttf);
+  font-family: "Abel-Regular";
+}
+@font-face{
+  src:url(../fuente/Pontano_Sans/PontanoSans-Regular.ttf);
+  font-family: "PontanoSans-Regular";
+}
+@font-face{
+  src:url(../fuente/Julius_Sans_One/JuliusSansOne-Regular.ttf);
+  font-family: "JuliusSansOne-Regular";
+}
+@font-face{
+  src:url(../fuente/Tinos/Tinos-Regular.ttf);
+  font-family: "Tinos-Regular";
+}
+@font-face{
+  src:url(../fuente/Glegoo/Glegoo-Regular.ttf);
+  font-family: "Glegoo-Regular";
+}
+@font-face{
+  src:url(../fuente/Basic-Regular.ttf);
+  font-family: "Basic-Regular";
+}
+.actividad>img{
+  width: 100%;  
+}
+.pantalla{
+  margin-top: 20px;
+  margin-bottom: 120px;
+}
+.carousel{
+  width: 60%;
+  height: 500px;
+  margin: 0px auto;
+}
+.item{
+  height: 500px;
+  background-color: #777;
+}
+.left{
+  border-radius: 12px;
+}
+.right{
+  border-radius: 12px;
+}
+.carousel-inner{
+  border-radius: 12px;
+  height: 500px;
+}
+.carousel-inner>.item>img{
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+/*fuentes de letras*/
+.especial{
+  color: #16D058;
+}
+/*fin*/
+.libre{
+  top: 0px;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  border-radius:0px;
+  border:1px solid rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0);
+  -webkit-transition:1s;
+  -moz-transition:1s; 
+}
+.libre-normal{
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  border-radius:0px;
+  border:1px solid rgba(0,0,0,0);
+  -webkit-transition:1s;
+  -moz-transition:1s; 
+}
+body{
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+.inicio{
+  width: 100%;
+  height: 1000px;
+  /*background-color: red;*/
+  margin: 0px;
+  padding: 0px;
+  clear: both;
+}
+.fondo{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-filter: brightness(0.60);
+  -moz-filter: brightness(0.60);
+  -moz-transition:1s;
+}
+.cuadro{
+  position: absolute;
+  top: 0px;
+}
+.parte:nth-child(1){
+  width: 850px;
+}
+.parte{
+  font-size: 2.5em;
+  font-family: "PatuaOne-Regular";
+  color: white;
+  text-align: center;
+}
+.parte-texto{
+  font-size: 1.5em;
+  font-family: "Abel-Regular";
+  color: white;
+  text-align: center;
+  top:320px;
+  position: relative;
+}
+.marcado{
+  font-family: "PatuaOne-Regular";
+  color: #3CBAEE;
+}
+.parte>img{
+  width: 250px;
+  height: 300px;
+}
+.intro{
+  background-color: white;
+  padding-top: 230px;
+  padding-bottom: 140px;
+  clear: both;
+  padding-left:0;
+  padding-right:0; 
+}
+.paralax{
+  background:url("../img/risa.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color:white;
+  text-shadow:0px 0px 10px black, 0px 0px 10px black,0px 0px 10px black;
+  font-size: 1.6em;
+  font-family: "Abel-Regular";
+  text-align: center; 
+  padding: 25px;
+}
+.encargado{
+  background-color: rgb(242, 242, 242,1);
+  padding: 80px;
+}
+.descripcion{
+  border-bottom:8px solid #357DE0;
+  border-radius:5px 5px 0px 0px; 
+  display: flex;
+  padding: 40px;
+  background-color: white;
+  box-shadow: 20px 20px 30px #909090;
+}
+.junto{
+  color: black;
+  font-family: "PontanoSans-Regular";
+  flex-grow:1;
+}
+.junto + .junto{
+ text-align: center;
+}
+.junto>img{
+  border-radius:100px;
+}
+.cabe{
+  font-size: 2em;
+  font-family: "PatuaOne-Regular";
+  color: #414141;
+}
+.info{
+  font-size: 1.1em;
+}
+.filas{
+  display: flex;
+  padding: 15px;
+}
+.modelo{
+  flex-grow:1;
+  display: flex;
+  border-radius:6px; 
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 26, 26,1);
+  margin: 8px;
+}
+.modelo>div{
+  flex-grow:1;
+}
+.perfil{
+  display: flex;
+  /*-webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;*/
+}
+.perfil>img{
+  margin: 0px auto;
+  width: 150px;
+  height: 150px;
+  border-radius:10px; 
+}
+.parrafo{
+  color: white;
+  font-size: 1.3em;
+  border-left: 2px solid #04D7B7;
+}
+.parrafo>p{
+  padding-left: 6px;
+  font-family: "PontanoSans-Regular";
+}
+.titulos{
+  margin:30px;
+  padding:10px;
+  border-bottom: 1px solid #1ACDED;
+  font-family: "PatuaOne-Regular";
+  color: #414141;
+  font-size: 2.2em; 
+}
+.opciones{
+  background-color: #323232;
+  padding: 3em;  
+}
+/*.encuentro{
+  padding: 10px;
+}*/
+.centrado{
+  text-align: center;
+  /*border: 1px solid rgb(140, 140, 140);
+  border-radius:9px;*/
+}
+.entero{
+  /*background-image:url("../img/boy.jpg"); 
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;*/
+  /*display: flex;
+  height: 450px;*/
+
+  margin-top: 220px;
+  /*margin-left: 120px;
+  margin-right: 120px;*/
+  padding: 30px;
+ /*border-radius:9px; 
+  border: 1px solid rgb(140, 140, 140);*/
+  /*box-shadow: 40px 40px 0px rgb(12, 12, 39,0.9); */
+}
+.metas{
+  width: 40%;
+  box-shadow: 10px 10px 20px #CDCDCD;
+  border-radius:100%; 
+}
+.relleno{
+  text-align: justify;
+  font-family: "Basic-Regular";
+  font-size: 1.1em;
+}
+.retos{
+  font-family: "Abel-Regular";
+  border-bottom:4px solid #12A8C3;
+  margin-bottom:20px;
+  padding-bottom: 6px;  
+}
+.grupos{
+  background-color: rgba(0,0,0,0.6);
+  width: 20%;
+  color: black;
+  overflow: auto;
+  flex-grow:1;
+}
+.menu{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.menu>li{
+  color: white;
+  font-size: 1.3em;
+  padding: 6px;
+  font-family: "JuliusSansOne-Regular";
+  border-bottom:1px solid black;
+  cursor: pointer;
+  -moz-transition:0.5s;
+  -webkit-transition:0.5s; 
+}
+.menu>li:hover{
+  border-bottom:1px solid #12CD89;
+}
+.ocultos{
+  background-color: rgb(240, 240, 240);
+  padding: 2em;
+  width: 80%;
+  overflow: auto;
+  flex-grow:1;
+}
+.ocultos>p{
+  font-size: 1.3em;
+  font-family: "Tinos-Regular";
+}
+.aviso{
+  margin-top:40px;
+  display: flex;
+  padding: 40px;
+}
+.comunicado{
+  border-top:2px solid #E72A64;  
+  flex-grow:1;
+}
+.indicador{
+  list-style: none;
+  padding: 0px;
+  margin:40px;  
+}
+.indicador>li{
+  margin: 0px;
+  padding: 2px;
+  font-size: 0.9em;
+  font-family: "Glegoo-Regular";
+  color: white;
+}
+/*.mural{
+  border: 1px black solid;
+  position: absolute;
+  display: flex;
+  top:150px;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+
+}
+.parte{
+  font-size: 2.5em;
+  color: white;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
+.histo{
+  clear: both;
+}*/
+/*pie de pagina*/
+.final{
+  background-color: black;
+}
+
